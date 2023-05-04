@@ -28,25 +28,23 @@ _current_path = _os.path.dirname(_os.path.abspath(__file__))
 
 _this_module = _sys.modules[__name__]
 
-_js_dist = []
-
-_js_dist.extend(
-    [
-        {
-            'relative_package_path': 'dash_mantine_components.js',
-    'external_url': 'https://unpkg.com/{0}@{2}/{1}/{1}.js'.format(
-                package_name, __name__, __version__),
-            'namespace': package_name
-        },
-        {
-            'relative_package_path': 'dash_mantine_components.js.map',
-    'external_url': 'https://unpkg.com/{0}@{2}/{1}/{1}.js.map'.format(
-                package_name, __name__, __version__),
-            'namespace': package_name,
-            'dynamic': True
-        }
-    ]
-)
+_js_dist = [
+    {
+        'relative_package_path': 'dash_mantine_components.js',
+        'external_url': 'https://unpkg.com/{0}@{2}/{1}/{1}.js'.format(
+            package_name, __name__, __version__
+        ),
+        'namespace': package_name,
+    },
+    {
+        'relative_package_path': 'dash_mantine_components.js.map',
+        'external_url': 'https://unpkg.com/{0}@{2}/{1}/{1}.js.map'.format(
+            package_name, __name__, __version__
+        ),
+        'namespace': package_name,
+        'dynamic': True,
+    },
+]
 
 _css_dist = []
 
